@@ -1,0 +1,574 @@
+<!doctype html>
+<!DOCTYPE html>
+<html data-theme="light" lang="uz">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="Islom.bey &mdash; zamonaviy internet do&lsquo;kon" name="description"/>
+  <title>
+   Islom.bey &mdash; Internet do&lsquo;kon
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="topline">
+   Islom.bey &mdash; qulay xarid, ishonchli xizmat &middot; Har kuni 09:00&ndash;22:00
+  </div>
+  <header class="header">
+   <div class="wrap">
+    <div class="headrow">
+     <a class="logo" href="#home">
+      <i class="fa-solid fa-bag-shopping">
+      </i>
+      Islom
+      <span>
+       .bey
+      </span>
+     </a>
+     <form class="search" id="searchForm">
+      <input aria-label="Mahsulot qidirish" id="searchInput" placeholder="Mahsulot nomi bo&lsquo;yicha qidirish..." type="search"/>
+      <button aria-label="Qidirish">
+       <i class="fa-solid fa-magnifying-glass">
+       </i>
+      </button>
+     </form>
+     <div class="actions">
+      <button aria-label="Kun/tun rejimi" class="iconbtn" id="themeBtn">
+       <i class="fa-solid fa-moon">
+       </i>
+      </button>
+      <select aria-label="Til" class="iconbtn" id="languageSelect">
+       <option value="uz">
+        UZ
+       </option>
+       <option value="ru">
+        RU
+       </option>
+       <option value="en">
+        EN
+       </option>
+      </select>
+      <button aria-label="Sevimlilar" class="iconbtn" id="favoritesBtn">
+       <i class="fa-regular fa-heart">
+       </i>
+       <span class="count" id="favCount">
+        0
+       </span>
+      </button>
+      <button class="iconbtn" id="cartBtn">
+       <i class="fa-solid fa-cart-shopping">
+       </i>
+       <span class="actionlabel">
+        Savatcha
+       </span>
+       <span class="count" id="cartCount">
+        0
+       </span>
+      </button>
+      <button class="account" id="openLogin">
+       <i class="fa-regular fa-user">
+       </i>
+       <span>
+        Kirish
+       </span>
+      </button>
+     </div>
+    </div>
+   </div>
+   <nav class="nav">
+    <div class="wrap navrow">
+     <a class="active" href="#home">
+      Bosh sahifa
+     </a>
+     <a href="#products">
+      Mahsulotlar
+     </a>
+     <a href="#services">
+      Xizmatlar
+     </a>
+     <a href="#about">
+      Biz haqimizda
+     </a>
+     <a href="#contact">
+      Aloqa
+     </a>
+     <a href="#products">
+      Maxsus takliflar
+     </a>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <section class="hero wrap" id="home">
+    <div class="promo">
+     <div class="promo-copy">
+      <span class="eyebrow">
+       ISLOM.BEY &middot; ONLAYN DO&lsquo;KON
+      </span>
+      <h1>
+       Kerakli mahsulotlar &mdash; bir joyda.
+      </h1>
+      <p>
+       O&lsquo;zingizga kerakli mahsulotlarni qulay toping, narxlarni ko&lsquo;ring va xaridlaringizni oson boshqaring.
+      </p>
+      <a class="btn btn-light" href="#products">
+       Mahsulotlarni ko&lsquo;rish
+       <i class="fa-solid fa-arrow-right">
+       </i>
+      </a>
+     </div>
+    </div>
+   </section>
+   <section class="section wrap" id="products">
+    <div class="sectionhead">
+     <div>
+      <h2>
+       Mahsulotlar
+      </h2>
+      <p>
+       Serverdagi katalog yangilanganda mahsulotlar shu yerda avtomatik ko&lsquo;rinadi.
+      </p>
+     </div>
+     <div class="tools">
+      <select aria-label="Saralash" id="sortSelect">
+       <option value="default">
+        Saralash: standart
+       </option>
+       <option value="price-asc">
+        Narx: arzonidan
+       </option>
+       <option value="price-desc">
+        Narx: qimmatidan
+       </option>
+       <option value="name">
+        Nomi bo&lsquo;yicha
+       </option>
+      </select>
+      <button class="iconbtn" id="refreshProducts" title="Yangilash">
+       <i class="fa-solid fa-rotate">
+       </i>
+      </button>
+     </div>
+    </div>
+    <div class="products" id="productsContainer">
+     <div class="empty">
+      <i class="fa-solid fa-box-open">
+      </i>
+      <div>
+       Mahsulotlar yuklanmoqda&hellip;
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="wrap services" id="services">
+    <div class="service">
+     <i class="fa-solid fa-truck-fast">
+     </i>
+     <div>
+      <b>
+       Tez yetkazib berish
+      </b>
+      <small>
+       Buyurtmani qulay qabul qilish
+      </small>
+     </div>
+    </div>
+    <div class="service">
+     <i class="fa-solid fa-shield-halved">
+     </i>
+     <div>
+      <b>
+       Sifat kafolati
+      </b>
+      <small>
+       Ishonchli xizmat
+      </small>
+     </div>
+    </div>
+    <div class="service">
+     <i class="fa-solid fa-credit-card">
+     </i>
+     <div>
+      <b>
+       Qulay to&lsquo;lov
+      </b>
+      <small>
+       Kelishilgan to&lsquo;lov usullari
+      </small>
+     </div>
+    </div>
+    <div class="service">
+     <i class="fa-solid fa-headset">
+     </i>
+     <div>
+      <b>
+       Yordam xizmati
+      </b>
+      <small>
+       Savollaringizga javob
+      </small>
+     </div>
+    </div>
+   </section>
+   <section class="section wrap about" id="about">
+    <div class="about-art">
+     <i class="fa-solid fa-store">
+     </i>
+    </div>
+    <div>
+     <span class="eyebrow">
+      BIZ HAQIMIZDA
+     </span>
+     <h2>
+      Xarid qilishni osonlashtiramiz
+     </h2>
+     <p>
+      Islom.bey &mdash; mahsulotlarni qulay ko&lsquo;rish va xarid qilish uchun yaratilgan internet-do&lsquo;kon. Mahsulotlar ro&lsquo;yxati serverdagi ma&rsquo;lumotlar bazasidan yuklanishi uchun PHP API sozlangan bo&lsquo;lishi kerak.
+     </p>
+     <p class="muted">
+      Katalogga mahsulot qo&lsquo;shilganda statik kartalarni qo&lsquo;lda tahrirlash shart emas.
+     </p>
+    </div>
+   </section>
+   <section class="section wrap contact" id="contact">
+    <div>
+     <span class="eyebrow">
+      BIZ BILAN BOG&lsquo;LANING
+     </span>
+     <h2>
+      Savolingiz bormi?
+     </h2>
+     <p class="muted">
+      Quyidagi ma&rsquo;lumotlarni yuboring. Formaning haqiqiy yuborilishi uchun server tomoni yoki email xizmati ulanadi.
+     </p>
+     <div class="contactinfo">
+      <div class="contactitem">
+       <i class="fa-solid fa-phone">
+       </i>
+       <div>
+        <b>
+         Telefon
+        </b>
+        <br/>
+        <span class="muted">
+         +998 88 605 11 90
+        </span>
+       </div>
+      </div>
+      <div class="contactitem">
+       <i class="fa-solid fa-location-dot">
+       </i>
+       <div>
+        <b>
+         Manzil
+        </b>
+        <br/>
+        <span class="muted">
+         Toshkent, O&lsquo;zbekiston
+        </span>
+       </div>
+      </div>
+      <div class="contactitem">
+       <i class="fa-regular fa-clock">
+       </i>
+       <div>
+        <b>
+         Ish vaqti
+        </b>
+        <br/>
+        <span class="muted">
+         Har kuni 09:00&ndash;22:00
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <form class="contactbox" id="contactForm">
+     <div class="field">
+      <label for="contactName">
+       Ismingiz
+      </label>
+      <input id="contactName" name="name" placeholder="Ismingiz" required=""/>
+     </div>
+     <div class="field">
+      <label for="contactEmail">
+       Email
+      </label>
+      <input id="contactEmail" name="email" placeholder="example@gmail.com" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="contactMessage">
+       Xabar
+      </label>
+      <textarea id="contactMessage" name="message" placeholder="Xabaringiz..." required="" rows="4"></textarea>
+     </div>
+     <button class="btn" type="submit">
+      Xabar yuborish
+      <i class="fa-solid fa-paper-plane">
+      </i>
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="footer" id="siteFooter">
+   <div class="wrap footer-main">
+    <div class="footer-brand">
+     <a class="logo" href="#home">
+      <i aria-hidden="true" class="fa-solid fa-bag-shopping">
+      </i>
+      Islom
+      <span>
+       .bey
+      </span>
+     </a>
+     <p>
+      Qulay xarid, ishonchli xizmat. Siz izlagan mahsulotlar &mdash; bir joyda.
+     </p>
+     <div aria-label="Ijtimoiy tarmoqlar" class="footer-social">
+      <a aria-label="Telegram" href="https://t.me/" rel="noopener noreferrer" target="_blank">
+       <i class="fa-brands fa-telegram">
+       </i>
+      </a>
+      <a aria-label="Instagram" href="https://instagram.com/" rel="noopener noreferrer" target="_blank">
+       <i class="fa-brands fa-instagram">
+       </i>
+      </a>
+      <a aria-label="Facebook" href="https://facebook.com/" rel="noopener noreferrer" target="_blank">
+       <i class="fa-brands fa-facebook-f">
+       </i>
+      </a>
+     </div>
+    </div>
+    <div class="footer-links">
+     <h3>
+      Sayt bo&lsquo;limlari
+     </h3>
+     <a href="#home">
+      Bosh sahifa
+     </a>
+     <a href="#products">
+      Mahsulotlar
+     </a>
+     <a href="#services">
+      Xizmatlar
+     </a>
+     <a href="#about">
+      Biz haqimizda
+     </a>
+    </div>
+    <div class="footer-links">
+     <h3>
+      Mijozlar uchun
+     </h3>
+     <a href="#contact">
+      Biz bilan bog&lsquo;lanish
+     </a>
+     <a href="#contact">
+      Yordam va savollar
+     </a>
+     <a href="#contact">
+      Yetkazib berish haqida
+     </a>
+     <a href="#contact">
+      Maxfiylik bo&lsquo;yicha savollar
+     </a>
+    </div>
+    <div class="footer-contact">
+     <h3>
+      Aloqa
+     </h3>
+     <p>
+      <i aria-hidden="true" class="fa-solid fa-phone">
+      </i>
+      +998 88 605 11 90
+     </p>
+     <p>
+      <i aria-hidden="true" class="fa-solid fa-location-dot">
+      </i>
+      Toshkent, O&lsquo;zbekiston
+     </p>
+     <p>
+      <i aria-hidden="true" class="fa-regular fa-clock">
+      </i>
+      Har kuni 09:00&ndash;22:00
+     </p>
+     <a class="footer-top" href="#home">
+      <i aria-hidden="true" class="fa-solid fa-arrow-up">
+      </i>
+      Yuqoriga qaytish
+     </a>
+    </div>
+   </div>
+   <div class="footer-bottom">
+    <div class="wrap footer-bottom-row">
+     <span>
+      &copy;
+      <span id="year">
+      </span>
+      Islom.bey. Barcha huquqlar himoyalangan.
+     </span>
+     <span>
+      Mehr bilan yaratilgan
+      <i aria-hidden="true" class="fa-solid fa-heart">
+      </i>
+     </span>
+    </div>
+   </div>
+  </footer>
+  <div aria-labelledby="authTitle" aria-modal="true" class="modal" id="authModal" role="dialog">
+   <div class="modalbox">
+    <button aria-label="Yopish" class="close" data-close="">
+     <i class="fa-solid fa-xmark">
+     </i>
+    </button>
+    <div class="authbrand">
+     <i class="fa-solid fa-user-lock">
+     </i>
+     <h2 id="authTitle">
+      Xush kelibsiz!
+     </h2>
+     <p id="authSubtitle">
+      Hisobingizga kirish uchun ma&rsquo;lumotlarni kiriting.
+     </p>
+    </div>
+    <div class="tabs">
+     <button class="tab active" id="loginTab">
+      Kirish
+     </button>
+     <button class="tab" id="registerTab">
+      Ro&lsquo;yxatdan o&lsquo;tish
+     </button>
+    </div>
+    <div class="message" hidden="" id="authMessage" role="status">
+    </div>
+    <form class="authform" id="loginForm">
+     <div class="field">
+      <label for="loginEmail">
+       Email manzilingiz
+      </label>
+      <input autocomplete="email" id="loginEmail" name="email" placeholder="example@gmail.com" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="loginPassword">
+       Parol
+      </label>
+      <div class="passwordbox">
+       <input autocomplete="current-password" id="loginPassword" name="password" placeholder="Parolingiz" required="" type="password"/>
+       <button data-toggle="loginPassword" type="button">
+        Ko&lsquo;rsatish
+       </button>
+      </div>
+     </div>
+     <button class="btn" type="submit">
+      Kirish
+      <i class="fa-solid fa-arrow-right">
+      </i>
+     </button>
+     <p class="switch">
+      Hisobingiz yo&lsquo;qmi?
+      <button class="linkbtn" id="goRegister" type="button">
+       Ro&lsquo;yxatdan o&lsquo;ting
+      </button>
+     </p>
+    </form>
+    <form class="authform" hidden="" id="registerForm">
+     <div class="field">
+      <label for="firstName">
+       Ism
+      </label>
+      <input autocomplete="given-name" id="firstName" name="firstName" placeholder="Ismingiz" required=""/>
+     </div>
+     <div class="field">
+      <label for="lastName">
+       Familiya
+      </label>
+      <input autocomplete="family-name" id="lastName" name="lastName" placeholder="Familiyangiz" required=""/>
+     </div>
+     <div class="field">
+      <label for="registerEmail">
+       Email manzilingiz
+      </label>
+      <input autocomplete="email" id="registerEmail" name="email" placeholder="example@gmail.com" required="" type="email"/>
+     </div>
+     <div class="field">
+      <label for="registerPhone">
+       Telefon raqami
+      </label>
+      <input autocomplete="tel" id="registerPhone" name="phone" placeholder="+998 90 123 45 67" required="" type="tel"/>
+     </div>
+     <div class="field">
+      <label for="registerPassword">
+       Parol (kamida 8 belgi)
+      </label>
+      <div class="passwordbox">
+       <input autocomplete="new-password" id="registerPassword" minlength="8" name="password" placeholder="Kamida 8 ta belgi" required="" type="password"/>
+       <button data-toggle="registerPassword" type="button">
+        Ko&lsquo;rsatish
+       </button>
+      </div>
+     </div>
+     <div class="field">
+      <label for="passwordConfirm">
+       Parolni tasdiqlash
+      </label>
+      <div class="passwordbox">
+       <input autocomplete="new-password" id="passwordConfirm" minlength="8" name="passwordConfirm" placeholder="Parolni qayta kiriting" required="" type="password"/>
+       <button data-toggle="passwordConfirm" type="button">
+        Ko&lsquo;rsatish
+       </button>
+      </div>
+     </div>
+     <button class="btn" type="submit">
+      Hisob yaratish
+      <i class="fa-solid fa-arrow-right">
+      </i>
+     </button>
+     <p class="switch">
+      Hisobingiz bormi?
+      <button class="linkbtn" id="goLogin" type="button">
+       Kirish
+      </button>
+     </p>
+    </form>
+    <p class="muted" style="font-size:11px;text-align:center;margin:20px 0 0">
+     🔒 Haqiqiy hisoblar uchun serverda parolni xavfsiz hash qilish va sessiya tekshiruvi zarur.
+    </p>
+   </div>
+  </div>
+  <div aria-labelledby="cartTitle" aria-modal="true" class="modal" id="cartModal" role="dialog">
+   <div class="modalbox">
+    <button aria-label="Yopish" class="close" data-close="">
+     <i class="fa-solid fa-xmark">
+     </i>
+    </button>
+    <div class="authbrand">
+     <i class="fa-solid fa-cart-shopping">
+     </i>
+     <h2 id="cartTitle">
+      Savatcha
+     </h2>
+    </div>
+    <div id="cartItems">
+    </div>
+    <div class="carttotal">
+     <span>
+      Jami
+     </span>
+     <span id="cartTotal">
+      0 so&lsquo;m
+     </span>
+    </div>
+    <button class="btn" id="checkoutBtn" style="width:100%">
+     Buyurtma berish
+    </button>
+   </div>
+  </div>
+  <div class="notice" id="notice" role="status">
+  </div>
+  <script defer="" src="script.js">
+  </script>
+ </body>
+</html>
